@@ -2,6 +2,8 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
+:root {
+}
 
 *,
 *::before,
@@ -75,9 +77,39 @@ ol[role="list"] {
   isolation: isolate;
 }
 
+body {
+  display: grid;
+  grid-template: 1fr 4fr / 1fr 4fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  input[type="search"] {
+    width: 60%;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background-color:;
+  }
+  label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
 .sidebar {
+  grid-area: sidebar;
   div {
     display: flex;
     align-items: center;
   }
+}
+
+.main {
+  grid-area: main;
 }
