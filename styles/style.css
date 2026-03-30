@@ -212,6 +212,18 @@ body {
         border-top-left-radius: 0.5rem;
         border-bottom-left-radius: 0.5rem;
         background-color: var(--color-white);
+        position: relative;
+        > div {
+          position: absolute;
+          right: 10px;
+          display: flex;
+          width: 30%;
+          justify-content: space-between;
+          svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
       }
     }
   }
@@ -284,4 +296,13 @@ h2 {
 
 body > svg:last-child {
   display: none;
+}
+
+button:has(> svg) {
+  appearance: none;
+  border: 0;
+  background-color: white;
+  cursor: pointer;
+  width: max-content;
+  height: max-content;
 }
